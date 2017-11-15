@@ -18,8 +18,7 @@ We would like to know the tags which are related to eachother.  Tags are related
 
 If a document has tags "fruit" and "apple", and there are more other documents which also have "fruit" and "apple" as 
 tags, we can say "fruit" and "apple" are related tags, because they occurred multiple times together. To avoid long running computation, 
-we provide a limit which tells you how many related tags should be generated for each tag. The output should be tag pairs. Please write these 
-tag pairs to the filesystem in CSV format.
+we provide a limit which tells you how many related tags should be generated for each tag. The output should be tag pairs. 
 
 
 **Example 1**
