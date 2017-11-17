@@ -1,8 +1,5 @@
 package utils
 
-import java.io.File
-import java.nio.file.Files
-
 import model.Tag
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs._

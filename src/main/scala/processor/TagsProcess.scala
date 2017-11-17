@@ -20,7 +20,7 @@ trait TagsProcess extends Serializable {
         (tagsWithCount._1._1, Seq((tagsWithCount._1._2, tagsWithCount._2))),
         (tagsWithCount._1._2, Seq((tagsWithCount._1._1, tagsWithCount._2)))
       )
-    )
+    ).filter(tagWithPair => !tagWithPair._1.value.equals(""))
 
     val tagsWithRelevantTags = tagPairWithCountMapped.reduceByKey(
       (listOfTags1, listOfTags2) => (listOfTags1 ++ listOfTags2).sortBy(_._2).takeRight(maximumTagsPerTag)

@@ -56,3 +56,20 @@ The output for the given input should be
   ("food", "fruit"), ("house", "building"), ("house", "home"), ("building", "house"), ("building", "home"),
   ("peach", "fruit"), ("peach", "sweet"), ("home", "house"), ("home", "apple")
 ]
+
+#Solution:  
+1. Load the tags into a dataframe in spark for each each row  
+2. I consider for rows with only one tag that tag will match and empty tag as pair  
+3. Each row of tags will generate a combination of 2 Tag,Tag  
+4. I used reduceByKey in order to count how many times each a combination of Tag,Tag appears  
+5. I grouped the resulted dataset on one of tags from the pair with the other one with count as value  
+6. In order to get the most relevant maximumTagsPerTag tags I used the following reduce by key logic  
+    => union the two parts of the reduce group values, sort by count, keep only the biggest maximumTagsPerTag
+    
+7. Return result mapped with the maximumTagsPerTag pairs sorted descending in the group
+8. Write each partition from the dataSet and mergeFiles in final output file
+
+#How to test it:  
+mvn clean install -> to install the jar  
+mvn test -> run the test
+mvn scala:run "-DaddArgs=maximumTagsPerTag|input|outputPath" -> run using arguments (Default will go 1, tags.csv from resources, result.csv at resources folder)   
