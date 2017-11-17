@@ -71,5 +71,5 @@ The output for the given input should be
 
 #How to test it:  
 mvn clean install -> to install the jar  
-mvn test -> run the test
+mvn test -> run the test  
 mvn scala:run "-DaddArgs=maximumTagsPerTag|input|outputPath" -> run using arguments (Default will go 1, tags.csv from resources, result.csv at resources folder)   
