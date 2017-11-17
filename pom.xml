@@ -10,6 +10,7 @@
 
     <properties>
         <scala.version>2.11</scala.version>
+        <scalacompiler.version>2.11.12</scalacompiler.version>
         <spark.version>2.1.0</spark.version>
     </properties>
 
@@ -35,6 +36,17 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.version}</artifactId>
             <version>${spark.version}</version>
+        </dependency>
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-compiler</artifactId>
+                <version>${scalacompiler.version}</version>
+                <scope>compile</scope>
+            </dependency>
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+            <version>1.2.1</version>
         </dependency>
     </dependencies>
 
