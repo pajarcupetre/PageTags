@@ -1,19 +1,8 @@
-##Related tags interview question
+##Related tags 
 ================================================
 
 A tag is a label provided by the reader of the given document. A document can have one or more tags. 
 We would like to know the tags which are related to eachother.  Tags are related to eachother if they occur multiple times together.
-  
--------------------------------------------------------
-
- Please write your scode in Scala and provide a readme file.  Make sure your code is fully tested. We will be assessing both you algorithmic and design skills.
- 
- - You are given src/main/resources/tags.csv file as input.
- - The file contains on each line tags as strings separated by comma; each line corresponds to a document. The line can be empty or can contain empty strings.
- - You are also given a config parameter: maximumTagsPerTag (positive integer) which tells you how many related tags should be generated for each tag; you can store this as variable or provide it from the input.
- - Please write the output to the filesystem in CSV format.
-  
--------------------------------------------------------
 
 
 If a document has tags "fruit" and "apple", and there are more other documents which also have "fruit" and "apple" as 
